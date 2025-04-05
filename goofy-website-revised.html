@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meth Is Love Meth Is Life</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: repeating-linear-gradient(45deg, #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #8a2be2, #ff00ff 100px);
+      cursor: url('/api/placeholder/32/32'), auto;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 4em;
+      text-shadow: 5px 5px 0 #00ff00, 10px 10px 0 #ff00ff;
+      animation: bounce 1s infinite;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+    
+    button {
+      background-color: #ff00ff;
+      color: yellow;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 24px;
+      padding: 10px 20px;
+      border: 5px dashed #00ff00;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 10px;
+      animation: wiggle 2s infinite;
+    }
+    
+    .popup {
+      position: fixed;
+      background-color: #ffff00;
+      border: 5px solid #ff00ff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+      z-index: 100;
+      font-size: 20px;
+      max-width: 300px;
+      text-align: center;
+      display: none;
+    }
+    
+    .popup button {
+      background-color: #00ff00;
+      color: blue;
+      font-size: 16px;
+      animation: none;
+    }
+    
+    .marquee {
+      background-color: #ff00ff;
+      color: yellow;
+      padding: 10px;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    
+    .marquee span {
+      display: inline-block;
+      animation: marquee 15s linear infinite;
+    }
+    
+    .goofy-image {
+      width: 100px;
+      height: 100px;
+      animation: spin 3s linear infinite;
+      position: absolute;
+    }
+    
+    .dance-text {
+      display: inline-block;
+      animation: dance 0.5s infinite;
+    }
+    
+    .blink {
+      animation: blink 0.5s infinite;
+    }
+    
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes marquee {
+      0% { transform: translateX(100vw); }
+      100% { transform: translateX(-100%); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes dance {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-5px) translateX(2px); }
+      50% { transform: translateY(0) translateX(-2px); }
+      75% { transform: translateY(5px) translateX(2px); }
+    }
+    
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    #confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .reward-image {
+      width: 100px;
+      height: 100px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="confetti"></div>
+  
+  <div class="container">
+    <h1>METH IS LOVE, METH IS LIFE!!</h1>
+    
+    <div class="marquee">
+      <span>Methamphetamine is a powerful, highly addictive stimulant drug that dramatically affects the central nervous system.  It is usually illegally produced and distributed.Meth comes in several forms, including powder, crystal, rocks, and tablets.   When it comes in the crystal form it is called “crystal meth.” </span>
+    </div>
+    
+    <p style="font-size: 24px; color: #ff00ff;">
+      <span class="dance-text">W</span>
+      <span class="dance-text">E</span>
+      <span class="dance-text">L</span>
+      <span class="dance-text">C</span>
+      <span class="dance-text">O</span>
+      <span class="dance-text">M</span>
+      <span class="dance-text">E</span>
+      <span class="dance-text">!</span>
+      <span class="dance-text">!</span>
+    </p>
+    
+    <p style="font-size: 20px;">
+      This website is brought to you by usdoj <span class="blink">(totally not made by ai)</span>
+    </p>
+    
+    <div style="text-align: center;">
+      <button id="goofy-button-1">FREE FENTANYL</button>
+      <button id="goofy-button-3">1 MILLION VBUCK (FREE)</button>
+      <button id="goofy-button-4">FREE METH</button>
+      <button id="goofy-button-5">I LOVE KETAMINE!</button>
+    </div>
+  </div>
+  
+  <div id="popup1" class="popup" style="top: 30%; left: 40%;">
+    <h3>FREE FENT!</h3>
+    <p>ADD NORFOLK_HI ON DISCORD FOR FREE FENTANYL!</p>
+    <img class="reward-image" src="https://raw.githubusercontent.com/FentanylGod44/meth.love/refs/heads/main/fent.png" alt="FENT">
+    <button onclick="this.parentElement.style.display='none';">I FUCKING LOVE FENT!</button>
+  </div>
+  
+  <div id="popup2" class="popup" style="top: 20%; left: 20%;">
+    <h3>FREE METH!</h3>
+    <p>ADD NORFOLK_HI ON DISCORD FOR FREE METH</p>
+    <img class="reward-image" src="https://raw.githubusercontent.com/FentanylGod44/meth.love/refs/heads/main/METH.PNG" alt="METH">
+    <button onclick="this.parentElement.style.display='none';">I FUCKING LOVE METH!</button>
+  </div>
+  
+  <div id="popup3" class="popup" style="top: 50%; left: 30%;">
+    <h3>1 MILLION VBUCKXZ!</h3>
+    <p>FREE FORTNITE VBUCK AT HTTPS://GOOGLE.COM</p>
+    <img class="reward-image" src="https://raw.githubusercontent.com/FentanylGod44/meth.love/refs/heads/main/freeveebux.jpg" alt="Trophy">
+    <button onclick="this.parentElement.style.display='none';">HOLY FUCK ITS FREE VBUCKZ!</button>
+  </div>
+  
+  <div id="popup4" class="popup" style="top: 40%; left: 50%;">
+    <h3>WHAT THE FUCK</h3>
+    <p>IM FUCKING TWEAKING!</p>
+    <img class="reward-image" src="https://raw.githubusercontent.com/FentanylGod44/meth.love/refs/heads/main/wtf.jpg" alt="TWEAKING">
+    <button onclick="this.parentElement.style.display='none';">IM FUCKIN TWEAKINNNNNNNNNNGGGGG</button>
+  </div>
+  
+  <div id="popup5" class="popup" style="top: 10%; left: 35%;">
+    <h3>FIRST CIGARETTE LETS CHASE THE BUZZ</h3>
+    <p>IM FUCKIN TWEAKINGGGGGGGGGGGGGGGGGGGGGGGGG!</p>
+    <img class="reward-image" src="https://raw.githubusercontent.com/FentanylGod44/meth.love/refs/heads/main/blunt.jpg" alt="MCDONALDS">
+    <button onclick="this.parentElement.style.display='none';">IM FINNA CRASH INTO THIS MCDONALDS!</button>
+  </div>
+  
+  <script>
+    // Show random popups
+    function showRandomPopup() {
+      const popupId = Math.floor(Math.random() * 5) + 1;
+      const popup = document.getElementById('popup' + popupId);
+      if (popup) {
+        popup.style.display = 'block';
+        popup.style.top = Math.random() * 70 + 10 + '%';
+        popup.style.left = Math.random() * 70 + 10 + '%';
+      } else {
+        console.warn('Popup not found: popup' + popupId);
+      }
+    }
+    
+    // Button click handlers
+    document.getElementById('goofy-button-1').addEventListener('click', function() {
+      document.getElementById('popup1').style.display = 'block';
+      createGoofyImages(5);
+    });
+    
+    document.getElementById('goofy-button-3').addEventListener('click', function() {
+      document.getElementById('popup3').style.display = 'block';
+      createGoofyImages(8);
+    });
+    
+    document.getElementById('goofy-button-4').addEventListener('click', function() {
+      document.getElementById('popup2').style.display = 'block';
+      createGoofyImages(10);
+
+    });
+    
+    document.getElementById('goofy-button-5').addEventListener('click', function() {
+      document.getElementById('popup5').style.display = 'block';
+      // Make everything dance more
+      const allElements = document.querySelectorAll('p, h1, h2, h3, button');
+      allElements.forEach(element => {
+        element.classList.add('dance-text');
+      });
+      createGoofyImages(20);
+    });
+    
+    // Create goofy floating images
+    function createGoofyImages(count) {
+      for (let i = 0; i < count; i++) {
+        const img = document.createElement('img');
+        img.src = `/api/placeholder/${50 + Math.random() * 50}/${50 + Math.random() * 50}`;
+        img.classList.add('goofy-image');
+        img.style.top = Math.random() * 90 + '%';
+        img.style.left = Math.random() * 90 + '%';
+        document.body.appendChild(img);
+      }
+    }
+    
+    // Random pop-ups
+    setInterval(showRandomPopup, 5000);
+    
+    // Create confetti
+    function createConfetti() {
+      const confettiContainer = document.getElementById('confetti');
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'absolute';
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = Math.random() * 10 + 5 + 'px';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        confetti.style.top = '-10px';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        confetti.style.animation = `fall ${Math.random() * 5 + 3}s linear infinite`;
+        
+        // Add fall animation
+        const keyframes = `
+        @keyframes fall {
+          0% { transform: translateY(-10px) rotate(0deg); }
+          100% { transform: translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg); }
+        }`;
+        const styleElement = document.createElement('style');
+        styleElement.innerHTML = keyframes;
+        document.head.appendChild(styleElement);
+        
+        confettiContainer.appendChild(confetti);
+      }
+    }
+    
+    createConfetti();
+    createGoofyImages(10);
+    
+    // Bonus: Alert when trying to leave
+    window.addEventListener('beforeunload', function(e) {
+      e.preventDefault();
+      e.returnValue = 'DONT LEAVE ME MICHAELLLLLL';
+      return 'MICHAEL DONT LEAVE ME';
+    });
+  </script>
+</body>
+</html>
